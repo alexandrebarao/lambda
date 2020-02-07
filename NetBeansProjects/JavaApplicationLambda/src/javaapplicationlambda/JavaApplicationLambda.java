@@ -7,6 +7,7 @@ package javaapplicationlambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -130,6 +131,19 @@ public class JavaApplicationLambda {
         listaSaldos.forEach(saldoComJuro -> System.out.println( saldoComJuro + saldoComJuro * .1 ));
         
         
+        // demonstração de estatísticas (instanciação com expressão lambda)
+        
+        DoubleSummaryStatistics estatisticas = listaSaldos.stream().mapToDouble((x)->x).summaryStatistics();
+        System.out.println("MAXIMO=" + estatisticas.getMax());
+        System.out.println("MINIMO=" + estatisticas.getMin());
+        System.out.println("SOMA=" + estatisticas.getSum());
+        System.out.println("MÉDIA=" + estatisticas.getAverage());
+        System.out.println("COUNT=" + estatisticas.getCount());
+        
+        
+        
+        
+        
         // #3 
         // Finalmente... Expressão lambda numa linha, com objetos!!!   
         System.out.println("Contas e titulares com 10% de juros a partir de objetos!");
@@ -144,6 +158,10 @@ public class JavaApplicationLambda {
                 }
         
         );
+        
+        
+        
+        
         
         
     }
