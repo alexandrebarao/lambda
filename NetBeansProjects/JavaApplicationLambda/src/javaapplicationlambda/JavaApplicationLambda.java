@@ -161,7 +161,43 @@ public class JavaApplicationLambda {
         
         
         
+        String s = "ola";
+        String s2 = "ola";
         
+        System.out.println(s==s2);
+        
+        Double d1 = new Double(10);
+        Double d2 = new Double(10);
+        
+        System.out.println(d1==d2);
+        System.out.println(d1.equals(d2));
+        
+        A a1 = new A(10); 
+        A a2 = new A(10); 
+        
+        System.out.println(a1==a2);
+        
+        System.out.println(a1.equals(a2));
+        
+        
+        
+        StringBuffer sb = new StringBuffer("ola");
+        StringBuffer sb2 = new StringBuffer("ola");
+        
+        System.out.println(sb==sb2);
+        System.out.println(sb.equals(sb2));
+        
+        StringBuilder sbuild = new StringBuilder("ola");
+        StringBuilder sbuild2 = new StringBuilder("ola");
+        
+        System.out.println(sbuild==sbuild2);
+        System.out.println(sbuild.equals(sbuild2));
+        
+        String aux1 = sb.toString();
+        String aux2 = sb2.toString();
+        System.out.println(aux1==aux2);
+        
+        System.out.println(aux1.equals(aux2));
         
         
     }
